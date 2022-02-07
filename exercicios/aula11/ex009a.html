@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Dados Comuns</h1>
+    Informe seu país <input type="text" name="txtp" id="txtp">
+    <input type="button" value="Confirm" onclick="confirmar()">
+    <div id="res"></div>
+    <script>
+        function confirmar() {
+            var txtpais = document.getElementById('txtp')
+            var resp = document.getElementById('res')
+            var pais = String(txtp.value)
+            res.innerHTML = `Você atualmente mora em ${pais}`
+            if (pais == 'Brasil') {
+                resp.innerHTML = `Você é Brasileiro`
+            } else {
+                resp.innerHTML = `Você é Estrangeiro`
+            }
+        }
+    </script>
+</body>
+</html>
